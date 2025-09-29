@@ -29,7 +29,9 @@ public:
     vector<Application> getApplications() { return applications; }
 
         void printInfo() {
-        cout << "CPU: " << cpu.getBrand() << " " << cpu.getModel() << endl;
+        cout << "CPU: " << cpu.getBrand() << " " << cpu.getModel()
+            << " - " << cpu.getCore() << " cores @ " 
+            << cpu.getSpeed() << "GHz" << endl;
         cout << "RAM: " << ram.getSize() << "GB " << ram.getDDR() << endl;
         cout << "Storage: " << storage->getBrand() << " " 
              << storage->getModel() << " " 
