@@ -12,9 +12,7 @@ Main
 │   │   └── main.cpp
 │   │
 │   └── Dokumentasi/
-│       ├── cpp1.png
-│       ├── cpp2.png
-│       └── cpp3.png
+│       └── cpp.png
 │
 ├── Java/
 │   ├── Program/
@@ -24,9 +22,7 @@ Main
 │   │   └── Main.java
 │   │
 │   └── Dokumentasi/
-│       ├── java1.png
-│       ├── java2.png
-│       └── java3.png
+│       └── java.png
 │
 ├── Python/
 │   ├── Program/
@@ -36,24 +32,7 @@ Main
 │   │   └── main.py
 │   │
 │   └── Dokumentasi
-│       ├── py1.png
-│       ├── py2.png
-│       └── py3.png
-│
-├── PHP/
-│   ├── Program/
-│   │   ├── Electronic.php
-│   │   ├── Device.php
-│   │   ├── SmartDevice.php
-│   │   ├── index.php
-│   │   └── images/
-│   │       └── *.jpg
-│   │
-│   └── Dokumentasi/
-│       ├── php1.png
-│       ├── php2.png
-│       ├── php3.png
-│       └── php4.png
+│       └── py.png
 │
 ├── Diagram.png
 └── README.md
