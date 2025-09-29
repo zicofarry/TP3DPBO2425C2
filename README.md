@@ -1,14 +1,23 @@
 # Janji
-Saya Muhammad 'Azmi Salam dengan NIM 2406010 mengerjakan Tugas Praktikum 2 pada Mata Kuliah Desain dan Pemrograman Berorientasi Objek (DPBO) untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
+Saya Muhammad 'Azmi Salam dengan NIM 2406010 mengerjakan Tugas Praktikum 3 pada Mata Kuliah Desain dan Pemrograman Berorientasi Objek (DPBO) untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
 
 # Struktur File
 ```
 Main
 ├── CPP/
 │   ├── Program/
-│   │   ├── Electronic.cpp
-│   │   ├── Device.cpp
-│   │   ├── SmartDevice.cpp
+│   │   ├── Application.cpp
+│   │   ├── Component.cpp
+│   │   ├── Computer.cpp
+│   │   ├── CPU.cpp
+│   │   ├── HardDrive.cpp
+│   │   ├── HardWare.cpp
+│   │   ├── HDD.cpp
+│   │   ├── OperatingSystem.cpp
+│   │   ├── RAM.cpp
+│   │   ├── SoftWare.cpp
+│   │   ├── SSD.cpp
+│   │   ├── Storage.cpp
 │   │   └── main.cpp
 │   │
 │   └── Dokumentasi/
@@ -16,9 +25,18 @@ Main
 │
 ├── Java/
 │   ├── Program/
-│   │   ├── Electronic.java
-│   │   ├── Device.java
-│   │   ├── SmartDevice.java
+│   │   ├── Application.java
+│   │   ├── Component.java
+│   │   ├── Computer.java
+│   │   ├── CPU.java
+│   │   ├── HardDrive.java
+│   │   ├── HardWare.java
+│   │   ├── HDD.java
+│   │   ├── OperatingSystem.java
+│   │   ├── RAM.java
+│   │   ├── SoftWare.java
+│   │   ├── SSD.java
+│   │   ├── Storage.java
 │   │   └── Main.java
 │   │
 │   └── Dokumentasi/
@@ -26,9 +44,18 @@ Main
 │
 ├── Python/
 │   ├── Program/
-│   │   ├── Electronic.py
-│   │   ├── Device.py
-│   │   ├── SmartDevice.py
+│   │   ├── Application.py
+│   │   ├── Component.py
+│   │   ├── Computer.py
+│   │   ├── CPU.py
+│   │   ├── HardDrive.py
+│   │   ├── HardWare.py
+│   │   ├── HDD.py
+│   │   ├── OperatingSystem.py
+│   │   ├── RAM.py
+│   │   ├── SoftWare.py
+│   │   ├── SSD.py
+│   │   ├── Storage.py
 │   │   └── main.py
 │   │
 │   └── Dokumentasi
@@ -42,53 +69,16 @@ Main
 <img src="Diagram.png" style="width: 100%;">
 
 # Desain
-Program mencakup __3__ class, yaitu __Electronic__, __Device__, dan __SmartDevice__. Program ini menerapkan __Multilevel Inheritance__, dengan __Electronic__ sebagai class dasar, kemudian __Device__, dan terakhir __SmartDevice__ sebagai class turunan paling bawah. Susunan inheritance tersebut dipilih karena class Electronic menyimpan atribut yang paling umum di antara ketiganya, sedangkan class SmartDevice memiliki atribut yang paling khusus. Berikut atribut dari masing-masing class:
-- Electronic:
-  - ID
-  - Name
-  - Stock
-  - Price
-  - Photo (khusus PHP)
-- Device
-  - Brand
-  - Warranty
-  - Power
-- SmartDevice
-  - OS
-  - Storage
-  - RAM
+Program mencakup __12__ class, yaitu __Application__, __Component__, __Computer__, __CPU__, __HardDrive__, __HardDrive__, __HardWare__, __HDD__, __OperatingSystem__, __RAM__, __SoftWare__, __SSD__ dan __Storage__. 
+Desain menerapkan konsep Object-Oriented Programming (OOP) dengan fitur berikut:
 
-# Flow Code & Panduan Penggunaan
-```
-============================================================================
-|+------------------------------------------------------------------------+|
-||                                                                        ||
-||     <<<<<<<<<<<<<  BUKU PANDUAN MENGGUNAKAN KODE  >>>>>>>>>>>>>        ||
-||                                                                        ||
-||     Pilih Masukan Perintah Dengan Format Seperti Di Bawah.             ||
-||     (TIDAK CASE SENSITIVE!!!!)                                         ||
-||     1. Jika Anda Memilih INSERT. Maka Tulis Name, Price, Stock,        ||
-||        Brand, Warranty, Power, OS, Storage, dan RAM (String Wajib      ||
-||        Diapit Dengan Tanda Petik Dua, CTH: "Handphone")                ||
-||        a. Format query untuk cpp, java, dan python:                    ||
-||          INSERT "[Name]" [Price] [Stock] "[Brand]" [Warranty]          ||
-||          [Power] "[OS]" [Storage] [RAM]                                ||
-||        b. Format query untuk php:                                      ||
-||          INSERT "[Name]" [Price] [Stock] "[Photo]" "[Brand]"           ||
-||          [Warranty] [Power] "[OS]" [Storage] [RAM]                     ||
-||                                                                        ||
-||     2. Perintah Langsung:                                              ||
-||        HELP                                                            ||
-||        -Berfungsi Untuk Menampilkan Buku Panduan.                      ||
-||        SHOW                                                            ||
-||        -Berfungsi Untuk Menampilkan Data Saat Ini.                     ||
-||        EXIT                                                            ||
-||        -Berfungsi Untuk Mengakhiri Program.                            ||
-||                                                                        ||
-||                                                                        ||
-|+------------------------------------------------------------------------+|
-============================================================================
-```
+- __Inheritance__: `HDD` & `SSD` mewarisi `HardDrive`, `HardDrive` mewarisi `Storage` & `Hardware`, `Storage`, `CPU`, & `RAM` mewarisi `Component`, dan `Application` & `OperatingSystem` mewarisi `SoftWare`.
+- __Composition__: Kelas `Computer` memiliki relasi composition dengan `CPU` dan `RAM`.
+- __Aggregation__: Kelas `Computer` memiliki relasi agregasi dengan `Storage`, `OperatingSystem`, dan `Application`.
+- __Array of Object__: `Computer` menyimpan banyak `Application` dalam bentuk array.
+- __Hierarchical Inheritance__: `Storage`, `CPU`, & `RAM` mewarisi `Component`, `HDD` & `SSD` mewarisi `HardDrive`, dan `Application` & `OperatingSystem` mewarisi `Software`.
+- __Multiple Inheritance__: `HardDrive` mewarisi `Storage` dan `Hardware`.
+- __Hybrid Inheritance__: Kombinasi hierarchical dan multiple inheritance.
 
 # Dokumentasi
 
