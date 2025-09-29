@@ -81,15 +81,6 @@ Desain menerapkan konsep Object-Oriented Programming (OOP) dengan fitur berikut:
 - __Hybrid Inheritance__: Kombinasi hierarchical dan multiple inheritance.
 
 ## Detail Kelas
-Oke, aku sudah lihat diagram UML 12 kelas kamu. Aku bikinkan README.md dengan format yang sama seperti contohmu tadi 👇
-
----
-
-# Computer System (OOP Design)
-
-Program ini adalah implementasi desain sistem komputer menggunakan konsep **Object-Oriented Programming (OOP)** dengan inheritance, composition, dan aggregation.
-
-## Detail Kelas
 
 ### Component
 * `brand`: Merek komponen.
